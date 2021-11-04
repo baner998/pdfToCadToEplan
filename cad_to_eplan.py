@@ -15,7 +15,11 @@ time.sleep(3)
 # gui.click()
 # gui.press('escape')
 
-for page_nr in [5, 282]:
+page_list = [21, 23, 25, 26, 27, 31, 37, 62, 63, 64, 65, 72, 73, 74, 76, 77, 78, 80, 83, 84, 85]
+
+sheet_list = [32, 34, 36, 37, 38, 44, 61, 127, 128, 131, 132, 183, 184, 185, 196, 197, 198, 200, 213, 221, 222]
+
+for page_nr, sheet_nr in zip(page_list, sheet_list):
     time.sleep(0.8)
     # zaimportowanie
     gui.keyDown('ctrl')
@@ -38,7 +42,7 @@ for page_nr in [5, 282]:
             gui.keyUp('shift')
 
         # wpisuje nazwe pliku
-    gui.typewrite(str(page_nr) + '_BB5.dwg', interval=0.05)
+    gui.typewrite('bb3_' + str(page_nr) + '.dwg', interval=0.05)
     gui.press('enter')
 
     # czekam, aż pojawi się okno ze źródłem i schematem
@@ -75,7 +79,7 @@ for page_nr in [5, 282]:
     #     time.sleep(0.1)
 
     # podaje numer strony
-    gui.typewrite(str(page_nr), interval=0.05)
+    gui.typewrite(str(sheet_nr), interval=0.05)
 
     # zatwierdzam numer
     gui.press('enter')
