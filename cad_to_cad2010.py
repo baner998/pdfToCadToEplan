@@ -27,7 +27,7 @@ page_list = ['005', '006', '007', '008', '009', '010', '011', '012', '013', '021
              '143', '191', '192', '193', '195', '196', '197', '198', '201', '202', '203', '204', '205', '206', '211',
              '221', '222', '231', '232']
 
-for page_nr in page_list:
+for page_nr in range(2,154):
 
     # 01 - "open"
     time.sleep(0.5)
@@ -40,7 +40,7 @@ for page_nr in page_list:
         time.sleep(0.1)
 
     # 03 - wpisać nazwę
-    gui.typewrite('UCP-' + page_nr, interval=0.05)
+    gui.typewrite(page_nr + '_page', interval=0.05)
     time.sleep(0.2)
 
     # 04 - zatwierdzić wpisaną nazwę pliku do otworzenia
