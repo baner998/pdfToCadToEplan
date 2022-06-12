@@ -23,10 +23,10 @@ gui.press('escape')
 
 time.sleep(3)
 
+#  initPath = 'D:\199_PROJEKTY_Inne\CADtoDWG\gravotech_cd_0711\singlePages\'
 
 
-
-for page_nr in range(5, 154):
+for page_nr in range(2, 5):
 
     time.sleep(0.5)
     gui.typewrite('import', interval=0.05)
